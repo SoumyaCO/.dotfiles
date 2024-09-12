@@ -10,7 +10,7 @@
 
 1. [Neovim](nvim/.config/nvim) - from "kickstart.nvim" customized for backend dev.
 2. [Aerospace](aerospace/.config/aerospace/aerospace.toml) - i3 like window management in macos
-3. [yazi](yazi/.config/yazi) - file navigator (for now it's default)
+3. [starship](starship/.config/starship.toml) - prompt written in rust and easy to tweak using `.toml`
 4. [wezterm](wezterm/.config/wezterm) - simple wezterm terminal config with lua
 5. [tmux](tmux/.tmux.conf) - easy keymaps, nice theme with "tpm"
 6. [zsh](zsh/.zshrc) - lots of aliases for easy nav.

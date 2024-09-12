@@ -1,0 +1,1 @@
+# Starship Config file
