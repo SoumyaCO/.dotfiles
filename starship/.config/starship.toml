@@ -25,6 +25,11 @@ error_symbol = '[](bold red)'
 [golang]
 format = '[ $version](bold cyan)'
 
+[python]
+symbol = ' '
+version_format = 'v${major}.${minor}'
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
 [lua]
 symbol = '󰢱 '
 style = 'bold blue'
@@ -55,5 +60,5 @@ symbol = '󰍛 '
 format = '$symbol[${ram}( | ${swap})]($style) '
 threshold = -1
 style = 'bold dimmed green'
-disabled = false
+disabled = true
 

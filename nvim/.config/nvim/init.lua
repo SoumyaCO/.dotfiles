@@ -900,7 +900,7 @@ require('lazy').setup({
       workspaces = {
         {
           name = 'personal',
-          path = '~/Documents/Obsidian/Obsidian Notes/',
+          path = '~/Documents/Obsidian/ObsidianNotes/',
         },
       },
 

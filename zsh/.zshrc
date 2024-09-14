@@ -20,7 +20,7 @@ alias e-star="nvim ~/.config/starship.toml"
 # lazygit
 alias lgit="lazygit"
 # Notes and Todos
-alias notes="cd ~/Documents/Obsidian/Obsidian\ Notes/ && nvim ."
+alias notes="cd ~/Documents/Obsidian/ObsidianNotes/ && nvim ."
 alias todo="figlet -f slant TODO && bat ~/notes/todo-instant.md"
 alias e-todo="nvim ~/notes/todo-instant.md"
 
