@@ -23,7 +23,8 @@ success_symbol = '[](bold cyan)'
 error_symbol = '[](bold red)'
 
 [golang]
-format = '[ $version](bold cyan)'
+version_format = 'v${major}.${minor}'
+format = '[ $version ](bold cyan)'
 
 [python]
 symbol = ' '
@@ -43,12 +44,13 @@ format = '[$symbol($version )]($style)'
 
 [package]
 symbol ='󰏗 '
+version_format = 'v${major}.${minor}'
 format = '[$symbol$version]($style) '
 
 [git_branch]
-symbol = '󰊢 '
+symbol = ' '
 style = 'bold red'
-format = '[\($symbol($branch)\)]($style)'
+format = '[$symbol($branch)]($style)'
 
 [git_status]
 style = 'bold red'

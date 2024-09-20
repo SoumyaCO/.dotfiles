@@ -24,8 +24,8 @@ function module.apply_to_config(config)
 	config.enable_tab_bar = false
 	config.window_decorations = "RESIZE"
 
-	config.window_background_opacity = 1.0
-	config.text_background_opacity = 1.0
+	config.window_background_opacity = 0.9
+	config.text_background_opacity = 0.9
 
 	config.window_background_image_hsb = {
 		-- Darken the background image
@@ -34,6 +34,12 @@ function module.apply_to_config(config)
 		hue = 1.0,
 		--saturation
 		saturation = 1.0,
+	}
+	config.window_padding = {
+		left = 10,
+		right = 10,
+		top = 10,
+		bottom = 0,
 	}
 	config.color_scheme = "Catppuccin Mocha"
 end

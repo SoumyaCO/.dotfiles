@@ -6,26 +6,35 @@ eval "$(starship init zsh)"
 # Volta
 export PATH="$VOLTA_HOME/bin:$PATH"
 # fzf
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
+# zoxide
+eval "$(zoxide init zsh)"
+
+# compinit
+autoload -Uz compinit
+compinit
+
+# add go path
+export PATH=$PATH:$HOME/go/bin
+
+# CONFIGURATIONS -----------------------------------------------
+# fzf configs
+# Set up fzf key bindings and fuzzy completion
+source ~/.config/fzf/.fzf.zsh
 
 # ALIASES -------------------------------------------------------
 alias ls="eza"
-alias ll="eza --long --header"
-alias la="eza -a"
-alias lal="eza --long --all --header"
-
-# starship 
-alias e-star="nvim ~/.config/starship.toml"
+alias ll="eza --long --header --icons"
+alias la="eza -a --long --header --icons"
 
 # lazygit
 alias lgit="lazygit"
+
 # Notes and Todos
 alias notes="cd ~/Documents/Obsidian/ObsidianNotes/ && nvim ."
 alias todo="figlet -f slant TODO && bat ~/notes/todo-instant.md"
 alias e-todo="nvim ~/notes/todo-instant.md"
 
-# fzf -- find files with preview
-alias fp="fzf --preview 'bat {} --color=always'"
 # editing shell
 alias edit-shell="nvim ~/.zshrc"
 # reloadind shell

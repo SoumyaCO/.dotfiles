@@ -13,6 +13,7 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.clipboard = 'unnamedplus'
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -111,6 +112,9 @@ vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+
+-- Todotelescope
+vim.keymap.set('n', '<leader>td', '<cmd>TodoTelescope<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -747,63 +751,22 @@ require('lazy').setup({
       }
     end,
   },
-
   { -- You can easily change to a different colorscheme.
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    '0xstepit/flow.nvim',
+    lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      require('catppuccin').setup {
-        flavour = 'auto', -- latte, frappe, macchiato, mocha
-        background = { -- :h background
-          light = 'latte',
-          dark = 'mocha',
-        },
-        transparent_background = false, -- disables setting the background color.
-        show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-        term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-        dim_inactive = {
-          enabled = false, -- dims the background color of inactive window
-          shade = 'dark',
-          percentage = 0.15, -- percentage of the shade to apply to the inactive window
-        },
-        no_italic = false, -- Force no italic
-        no_bold = false, -- Force no bold
-        no_underline = false, -- Force no underline
-        styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-          comments = { 'italic' }, -- Change the style of comments
-          conditionals = { 'italic' },
-          loops = {},
-          functions = {},
-          keywords = {},
-          strings = {},
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-          operators = {},
-          -- miscs = {}, -- Uncomment to turn off hard-coded styles
-        },
-        color_overrides = {},
-        custom_highlights = {},
-        default_integrations = true,
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          nvimtree = true,
-          treesitter = true,
-          notify = false,
-          mini = {
-            enabled = true,
-            indentscope_color = '',
-          },
-          -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-        },
+      require('flow').setup {
+        dark_theme = true, -- Set the theme with dark background.
+        high_contrast = false, -- Make the dark background darker or the light background lighter.
+        transparent = true, -- Set transparent background.
+        fluo_color = 'green', -- Color used as fluo. Available values are pink, yellow, orange, or green.
+        mode = 'base', -- Mode of the colors. Available values are: dark, bright, desaturate, or base.
+        aggressive_spell = false, -- Use colors for spell check.
       }
 
-      -- setup must be called before loading
-      vim.cmd.colorscheme 'catppuccin'
+      vim.cmd 'colorscheme flow'
     end,
   },
 
@@ -1022,9 +985,9 @@ require('lazy').setup({
       require('lualine').setup {
         options = {
           icons_enabled = true,
-          theme = 'auto',
-          component_separators = { left = '', right = '' },
-          section_separators = { left = '', right = '' },
+          theme = 'iceberg_dark',
+          component_separators = '',
+          section_separators = '',
           disabled_filetypes = {
             statusline = {},
             winbar = {},
