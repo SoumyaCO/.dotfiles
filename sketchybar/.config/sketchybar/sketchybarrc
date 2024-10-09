@@ -13,7 +13,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=bottom height=32 blur_radius=30 color=0x40000000 border_color=0xff00ffff border_width=1 corner_radius=5 margin=1
+sketchybar --bar position=bottom height=32 blur_radius=30 color=0x40000000 corner_radius=5 margin=1
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -83,9 +83,10 @@ sketchybar --add item clock right \
            --subscribe volume volume_change \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change
+           --subscribe battery system_woke power_source_change \
            --add item wifi right \
-           --set wifi icon=󰖩 
+           --set wifi update_freq=120 script="$PLUGIN_DIR/wifi.sh" \
+           --subscribe wifi wifi_change
 
 # detect aerospace workspaces(uses the plugin --> aerospace.sh)
 

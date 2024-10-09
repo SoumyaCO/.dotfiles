@@ -1,0 +1,11 @@
+[manager]
+sort_by = "modified"
+show_hidden = true
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, for = "unix" },
+]
+
+[flavour]
+use = "dracula"

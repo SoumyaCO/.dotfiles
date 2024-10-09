@@ -1025,19 +1025,13 @@ require('lazy').setup({
     end,
   },
   {
-    'kndndrj/nvim-dbee',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-    },
-    build = function()
-      -- Install tries to automatically detect the install method.
-      -- if it fails, try calling it with one of these parameters:
-      --    "curl", "wget", "bitsadmin", "go"
-      require('dbee').install()
+    'iamcco/markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    build = 'cd app && yarn install',
+    init = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
     end,
-    config = function()
-      require('dbee').setup(--[[optional config]])
-    end,
+    ft = { 'markdown' },
   },
   {
     'prichrd/netrw.nvim',

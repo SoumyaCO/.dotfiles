@@ -24,8 +24,8 @@ function module.apply_to_config(config)
 	config.enable_tab_bar = false
 	config.window_decorations = "RESIZE"
 
-	config.window_background_opacity = 0.9
-	config.text_background_opacity = 0.9
+	config.window_background_opacity = 1.0
+	config.text_background_opacity = 1.0
 
 	config.window_background_image_hsb = {
 		-- Darken the background image
@@ -41,7 +41,9 @@ function module.apply_to_config(config)
 		top = 10,
 		bottom = 0,
 	}
-	config.color_scheme = "Catppuccin Mocha"
+	-- config.color_scheme = "Catppuccin Mocha"
+	-- config.color_scheme = "CGA"
+	config.color_scheme = "Chalk"
 end
 
 -- return module table
