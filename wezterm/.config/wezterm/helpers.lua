@@ -15,9 +15,13 @@ end
 function module.apply_to_config(config)
 	private_helper()
 
+	-- config.font = wezterm.font_with_fallback({
+	-- 	"Dank Mono",
+	-- 	"Agave Nerd Font",
+	-- })
 	config.font = wezterm.font_with_fallback({
-		"Dank Mono",
-		"Agave Nerd Font",
+		"MonoLisa",
+		"Hack Nerd Font",
 	})
 	config.font_size = 18
 
@@ -41,8 +45,7 @@ function module.apply_to_config(config)
 		top = 10,
 		bottom = 0,
 	}
-	-- config.color_scheme = "Catppuccin Mocha"
-	-- config.color_scheme = "CGA"
+	-- config.color_scheme = "rose-pine"
 	config.color_scheme = "Chalk"
 end
 

@@ -38,7 +38,7 @@ alias cd="z"
 
 # Notes and Todos
 alias notes="cd ~/Documents/Obsidian/ObsidianNotes/ && nvim ."
-alias todo="figlet -c -f slant TODO && bat ~/notes/todo-instant.md"
+alias todo="bat ~/notes/todo-instant.md"
 alias e-todo="nvim ~/notes/todo-instant.md"
 
 # editing shell
