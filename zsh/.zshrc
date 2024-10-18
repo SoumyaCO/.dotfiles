@@ -38,7 +38,7 @@ alias cd="z"
 
 # Notes and Todos
 alias notes="cd ~/Documents/Obsidian/ObsidianNotes/ && nvim ."
-alias todo="bat ~/notes/todo-instant.md"
+alias todo="cat ~/notes/todo-instant.md"
 alias e-todo="nvim ~/notes/todo-instant.md"
 
 # editing shell
@@ -49,3 +49,4 @@ alias reload-shell="source ~/.zshrc"
 # STARTUP ------------------------------------------------------
 # My Name
 figlet -c -f Graffiti SoumyaCO | lolcat
+todo

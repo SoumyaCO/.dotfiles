@@ -27,7 +27,7 @@ version_format = 'v${major}.${minor}'
 format = '[ $version ](bold cyan)'
 
 [python]
-symbol = ' '
+symbol = ' '
 version_format = 'v${major}.${minor}'
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
@@ -37,10 +37,15 @@ style = 'bold blue'
 format = '[$symbol($version )]($style)'
 
 [nodejs]
-symbol = ' '
+symbol = ' '
 style = "bold green"
 version_format = 'v${major}.${minor}'
 format = '[$symbol($version )]($style)'
+
+[c]
+style = 'bold 149'
+version_format = 'v${major}.${minor}'
+format = '[$name ($version )]($style)'
 
 [package]
 symbol ='󰏗 '
