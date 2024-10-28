@@ -10,6 +10,14 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh)"
 
+# [Android] --------------------------------
+# Flutter
+export PATH=$HOME/development/flutter/bin:$PATH
+# Android
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+# -------------------------------------------
+
 # compinit
 autoload -Uz compinit
 compinit
@@ -35,10 +43,11 @@ alias ldoc="lazydocker"
 
 # zoxide
 alias cd="z"
+alias his='cd "$(zoxide query -i)"'
 
 # Notes and Todos
 alias notes="cd ~/Documents/Obsidian/ObsidianNotes/ && nvim ."
-alias todo="cat ~/notes/todo-instant.md"
+alias todo="bat --theme=base16 ~/notes/todo-instant.md"
 alias e-todo="nvim ~/notes/todo-instant.md"
 
 # editing shell

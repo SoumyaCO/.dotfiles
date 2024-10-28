@@ -23,11 +23,20 @@ function module.apply_to_config(config)
 	-- 5. DejaVu Shans (free)
 	-- 6. Code new Roman (free)
 	-- [conc.] Swithched to Cascadia Code bcz, it's free, and I don't want a bad habit of paid fonts
+	-- config.font = wezterm.font_with_fallback({
+	-- 	{
+	-- 		family = "Monaspace Argon",
+	-- 		weight = "Regular",
+	-- 		harfbuzz_features = { "calt", "ss01", "ss02", "ss03", "ss05", "ss06", "ss07", "ss08", "ss09", "liga" },
+	-- 	},
+	-- 	{
+	-- 		family = "Hack Nerd Font",
+	-- 	},
+	-- })
+
 	config.font = wezterm.font_with_fallback({
 		{
-			family = "Monaspace Argon",
-			weight = "Regular",
-			harfbuzz_features = { "calt", "ss01", "ss02", "ss03", "ss05", "ss06", "ss07", "ss08", "ss09", "liga" },
+			family = "Code New Roman",
 		},
 		{
 			family = "Hack Nerd Font",
@@ -35,7 +44,7 @@ function module.apply_to_config(config)
 	})
 
 	config.font_size = 18
-	config.line_height = 1.2
+	config.line_height = 1.0
 
 	config.enable_tab_bar = false
 	config.window_decorations = "RESIZE"
@@ -59,7 +68,7 @@ function module.apply_to_config(config)
 	}
 	-- I'm using neovim with
 	-- "Nord" theme which is similar to "Nordfox" in wezterm
-	config.color_scheme = "nordfox"
+	config.color_scheme = "Bamboo"
 end
 
 -- return module table
