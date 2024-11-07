@@ -15,35 +15,25 @@ end
 function module.apply_to_config(config)
 	private_helper()
 
-	-- Other font options are
-	-- 1. Dank Mono(paid)
-	-- 2. MonoLisa (paid)
-	-- 3. JetBrains Mono (free)
-	-- 4. Cascadia Code (free) --> Same as MonoLisa
-	-- 5. DejaVu Shans (free)
-	-- 6. Code new Roman (free)
-	-- [conc.] Swithched to Cascadia Code bcz, it's free, and I don't want a bad habit of paid fonts
-	-- config.font = wezterm.font_with_fallback({
+	--  NOTE: Monaspace font's ligatures need this feature.
 	-- 	{
-	-- 		family = "Monaspace Argon",
-	-- 		weight = "Regular",
 	-- 		harfbuzz_features = { "calt", "ss01", "ss02", "ss03", "ss05", "ss06", "ss07", "ss08", "ss09", "liga" },
 	-- 	},
-	-- 	{
-	-- 		family = "Hack Nerd Font",
-	-- 	},
-	-- })
+	-- 	Other good fonts are(free):
+	-- 	Victor Mono
+	-- 	Monaspace Fonts
+	-- 	Code new Roman [prev]
+	--  DejaVu Sans
+	--  Zed Mono [Current]
+    --  Zed Mono Medium Extended
 
 	config.font = wezterm.font_with_fallback({
 		{
-			family = "Code New Roman",
-		},
-		{
-			family = "Hack Nerd Font",
+			family = "JetBrainsMono Nerd Font",
 		},
 	})
 
-	config.font_size = 18
+	config.font_size = 16
 	config.line_height = 1.0
 
 	config.enable_tab_bar = false

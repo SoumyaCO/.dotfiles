@@ -16,7 +16,7 @@ Arch = '󰣇 '
 
 [directory]
 truncation_length = 8
-truncation_symbol = '…/'
+truncation_symbol = '.../'
 
 [character]
 success_symbol = '[](bold cyan)'

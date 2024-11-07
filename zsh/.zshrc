@@ -57,5 +57,4 @@ alias reload-shell="source ~/.zshrc"
 
 # STARTUP ------------------------------------------------------
 # My Name
-figlet -c -f Graffiti SoumyaCO | lolcat
-todo
+# figlet -c -f Graffiti SoumyaCO | lolcat
